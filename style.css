@@ -455,8 +455,9 @@ section {
 /* Action Gallery */
 .action-gallery {
     position: relative;
-    width: min(650px, 100%);
-    aspect-ratio: 1 / 1;
+    width: 600px;
+    height: 600px;
+    max-width: 100%;
     margin: 0 auto 40px;
     overflow: hidden;
     border: 4px solid var(--gold);
@@ -469,8 +470,8 @@ section {
     display: block;
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    object-position: center;
+    object-fit: contain;
+    background: var(--navy-dark);
     transition: opacity 0.5s ease;
 }
 
@@ -999,5 +1000,10 @@ body.dark-mode {
     section {
         padding: 56px 0;
     }
+    .action-gallery {
+    width: 90%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+}
 }
 ```
