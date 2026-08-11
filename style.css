@@ -253,11 +253,11 @@ section {
 }
 
 
-/* Team Photo */
+/*  Photo */
 
 .team-photo {
     position: relative;
-    width: min(500px, 90%);
+    width: min(750px, 90%);
     margin: 40px auto;
     padding: 15px 15px 45px;
     background: var(--white);
