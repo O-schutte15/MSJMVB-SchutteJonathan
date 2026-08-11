@@ -24,35 +24,87 @@
     </nav>
   </header>
 
-  <main>
+ <main>
+
     <section class="page-intro schedule-intro">
-      <p class="eyebrow">2026 season</p>
-      <h1>Schedule &amp; Results</h1>
-      <p>Follow the Lions through every home, away, and completed match.</p>
+        <p class="eyebrow">2026 season</p>
+        <h1>Schedule &amp; Results</h1>
+        <p>Follow the Lions through every home, away, and completed match.</p>
     </section>
-    <section aria-labelledby="matches-title">
-      <div class="schedule-toolbar">
-        <h2 id="matches-title">Matches</h2>
-        <div class="filter-group" role="group" aria-label="Filter matches">
-          <button class="filter-button is-selected" type="button" data-filter="all">All</button>
-          <button class="filter-button" type="button" data-filter="home">Home</button>
-          <button class="filter-button" type="button" data-filter="away">Away</button>
-          <button class="filter-button" type="button" data-filter="mcvl">MCVL</button>
-          <button class="filter-button" type="button" data-filter="completed">Completed</button>
+
+
+    <div class="action-gallery">
+
+        <img
+            id="action-gallery-image"
+            src="action/MSJ-500.jpg"
+            alt="MSJ Men's Volleyball action shot"
+        >
+
+        <div class="gallery-overlay">
+            <span>MSJ Men's Volleyball</span>
         </div>
-      </div>
-      <p id="matchCount" class="match-count" aria-live="polite"></p>
-      <div id="scheduleList" class="schedule-list"></div>
-      <p id="emptyState" class="empty-state" hidden>No matches match this filter.</p>
+
+        <button class="gallery-button gallery-prev" id="gallery-prev">
+            &#10094;
+        </button>
+
+        <button class="gallery-button gallery-next" id="gallery-next">
+            &#10095;
+        </button>
+
+    </div>
+
+
+    <section aria-labelledby="matches-title">
+        <div class="schedule-toolbar">
+            <h2 id="matches-title">Matches</h2>
+
+            <div class="filter-group" role="group" aria-label="Filter matches">
+                <button class="filter-button is-selected" type="button" data-filter="all">All</button>
+                <button class="filter-button" type="button" data-filter="home">Home</button>
+                <button class="filter-button" type="button" data-filter="away">Away</button>
+                <button class="filter-button" type="button" data-filter="mcvl">MCVL</button>
+                <button class="filter-button" type="button" data-filter="completed">Completed</button>
+            </div>
+        </div>
+
+        <p id="matchCount" class="match-count" aria-live="polite"></p>
+
+        <div id="scheduleList" class="schedule-list"></div>
+
+        <p id="emptyState" class="empty-state" hidden>
+            No matches match this filter.
+        </p>
     </section>
+
+
     <section class="game-day" aria-labelledby="gameday-title">
-      <p class="eyebrow">Game day</p>
-      <h2 id="gameday-title">Make some noise for the Lions.</h2>
-      <p>Home matches are played in the Harrington Center at 5701 Delhi Road. Arrive early, find your seat, and help create the energy that makes home court special.</p>
-      <figure class="gym-photo"><img src="images/harringtongym_FINAL.jpg" alt="The Harrington Center gym during a Mount St. Joseph event"><figcaption>Harrington Center &mdash; home of MSJ Men's Volleyball.</figcaption></figure>
+        <p class="eyebrow">Game day</p>
+
+        <h2 id="gameday-title">
+            Make some noise for the Lions.
+        </h2>
+
+        <p>
+            Home matches are played in the Harrington Center at 5701 Delhi Road.
+            Arrive early, find your seat, and help create the energy that makes
+            home court special.
+        </p>
+
+        <figure class="gym-photo">
+            <img
+                src="images/harringtongym_FINAL.jpg"
+                alt="The Harrington Center gym during a Mount St. Joseph event"
+            >
+
+            <figcaption>
+                Harrington Center &mdash; home of MSJ Men's Volleyball.
+            </figcaption>
+        </figure>
     </section>
-  
-  </main>
+
+</main>
   <footer><p>&copy; 2026 Mount St. Joseph Men's Volleyball</p></footer>
   <script src="script.js"></script>
 </body>
