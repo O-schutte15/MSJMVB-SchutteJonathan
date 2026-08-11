@@ -81,6 +81,12 @@ const actionShots = [
     "action/MSJ-705.jpg",
     "action/MSJ-727.jpg",
     "action/MSJ-751.jpg"
+    "action/MSJ-522.jpg"
+    "action/MSJ-535.jpg"
+    "action/MSJ-656.jpg"
+    "action/MSJ-669.jpg"
+    "action/MSJ-747.jpg"
+    "action/MSJ-779.jpg"
 ];
 
 const galleryImage = document.getElementById("action-gallery-image");
