@@ -598,55 +598,37 @@ section {
 
 /* Campus / Gym Images */
 
-.campus-map-section {
-    padding-top: 28px;
-}
-
-.campus-map-layout {
-    display: grid;
-    grid-template-columns: 1.7fr 1fr;
-    gap: 30px;
-    align-items: start;
-}
-
-.campus-map {
-    display: block;
-    width: 100%;
-    margin: 0;
-    border: 4px solid var(--gold);
-    border-radius: var(--radius);
-    box-shadow: var(--shadow);
-}
-
 .campus-key {
-    padding: 24px;
+    padding: 18px 20px;
     background: var(--surface);
     border-left: 4px solid var(--gold);
     border-radius: var(--radius);
 }
 
 .campus-key h2 {
-    margin-bottom: 18px;
+    margin-bottom: 12px;
     color: var(--navy);
-    font-size: 1.8rem;
+    font-size: 1.5rem;
 }
 
 .campus-key-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    column-gap: 25px;
+    column-gap: 20px;
     row-gap: 0;
 }
 
 .campus-key-grid div {
-    padding: 6px 0;
+    padding: 3px 0;
     border-bottom: 1px solid var(--line);
     color: var(--muted);
-    font-size: 0.9rem;
+    font-size: 0.75rem;
+    line-height: 1.3;
 }
 
 .campus-key-grid strong {
     color: var(--navy);
+}
 }
 
 
