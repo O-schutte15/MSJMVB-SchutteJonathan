@@ -630,21 +630,21 @@ section {
     color: var(--navy);
     font-size: 1.8rem;
 }
-.campus-key-grid {
+
+.campus-key-columns {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    column-gap: 25px;
     gap: 0 25px;
 }
 
-.campus-key-grid div {
+.campus-key-column div {
     padding: 6px 0;
     border-bottom: 1px solid var(--line);
     color: var(--muted);
     font-size: 0.9rem;
 }
 
-.campus-key-grid strong {
+.campus-key-column strong {
     color: var(--navy);
 }
 
@@ -653,14 +653,13 @@ section {
 }
 
 .dark-mode .campus-key h2,
-.dark-mode .campus-key-grid strong {
+.dark-mode .campus-key-column strong {
     color: var(--gold);
 }
 
-.dark-mode .campus-key-grid div {
+.dark-mode .campus-key-column div {
     border-color: var(--line);
 }
-
 
 /* Dark Mode */
 
