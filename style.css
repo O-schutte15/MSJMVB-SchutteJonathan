@@ -452,7 +452,84 @@ section {
     object-position: center top;
 }
 
+/* Action Gallery */
 
+.action-gallery {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    margin-bottom: 40px;
+    overflow: hidden;
+    border: 4px solid var(--gold);
+    border-radius: var(--radius);
+    background: var(--navy-dark);
+    box-shadow: var(--shadow);
+}
+
+.action-gallery img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: opacity 0.5s ease;
+}
+
+.gallery-overlay {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 40px 25px 18px;
+    background: linear-gradient(
+        transparent,
+        rgba(6, 26, 46, 0.85)
+    );
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.gallery-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 42px;
+    height: 42px;
+    border: 2px solid var(--gold);
+    border-radius: 50%;
+    background: rgba(6, 26, 46, 0.75);
+    color: var(--gold);
+    font-size: 1.4rem;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.gallery-button:hover {
+    background: var(--gold);
+    color: var(--navy-dark);
+}
+
+.gallery-prev {
+    left: 15px;
+}
+
+.gallery-next {
+    right: 15px;
+}
+
+@media (max-width: 760px) {
+    .action-gallery {
+        height: 275px;
+        margin-bottom: 30px;
+    }
+
+    .gallery-button {
+        width: 36px;
+        height: 36px;
+        font-size: 1.1rem;
+    }
+}
 /* Schedule */
 
 .schedule-toolbar {
