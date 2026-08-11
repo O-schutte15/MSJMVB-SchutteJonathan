@@ -453,11 +453,12 @@ section {
 }
 
 /* Action Gallery */
+/* Action Gallery */
 .action-gallery {
     position: relative;
-    width: 600px;
-    height: 550px;
-    max-width: 100%;
+    width: 100%;
+    max-width: 700px;
+    height: 500px;
     margin: 0 auto 40px;
     overflow: hidden;
     border: 4px solid var(--gold);
@@ -518,9 +519,12 @@ section {
     right: 15px;
 }
 
+/* Gallery - Mobile */
 @media (max-width: 760px) {
     .action-gallery {
-        height: 275px;
+        width: 100%;
+        max-width: 100%;
+        height: 350px;
         margin-bottom: 30px;
     }
 
@@ -1000,10 +1004,5 @@ body.dark-mode {
     section {
         padding: 56px 0;
     }
-    .action-gallery {
-    width: 90%;
-    height: auto;
-    aspect-ratio: 1 / 1;
-}
 }
 ```
