@@ -8,6 +8,7 @@ if (toggleButton) {
   });
 }
 
+
 const matches = [
   { date: "Jan 9", opponent: "Lakeland University", location: "Neutral", result: "L 0-3", conference: false },
   { date: "Jan 9", opponent: "Trine University", location: "Away", result: "L 0-3", conference: false },
@@ -30,6 +31,7 @@ const matches = [
   { date: "Apr 3", opponent: "Spalding University (Ky.)", location: "Away", result: "L 2-3", conference: true }
 ];
 
+
 const scheduleList = document.getElementById("scheduleList");
 const filterButtons = document.querySelectorAll(".filter-button");
 const matchCount = document.getElementById("matchCount");
@@ -46,47 +48,73 @@ function renderSchedule(filter = "all") {
 
   scheduleList.innerHTML = filteredMatches.map((match) => {
     const resultClass = match.result.startsWith("W") ? "win" : "loss";
-    const conferenceBadge = match.conference ? '<span class="conference-badge">MCVL</span>' : "";
+    const conferenceBadge = match.conference
+      ? '<span class="conference-badge">MCVL</span>'
+      : "";
+
     return `<article class="match-card">
-      <time class="match-date">${match.date}<span>2026</span></time>
-      <div class="match-details"><p class="match-status">Final</p><h3>vs. ${match.opponent}</h3><span class="location-badge ${match.location.toLowerCase()}">${match.location}</span>${conferenceBadge}</div>
-      <strong class="match-result ${resultClass}">${match.result}</strong>
+      <time class="match-date">
+        ${match.date}
+        <span>2026</span>
+      </time>
+
+      <div class="match-details">
+        <p class="match-status">Final</p>
+        <h3>vs. ${match.opponent}</h3>
+        <span class="location-badge ${match.location.toLowerCase()}">
+          ${match.location}
+        </span>
+        ${conferenceBadge}
+      </div>
+
+      <strong class="match-result ${resultClass}">
+        ${match.result}
+      </strong>
     </article>`;
   }).join("");
 
-  matchCount.textContent = `${filteredMatches.length} match${filteredMatches.length === 1 ? "" : "es"} shown`;
+  matchCount.textContent =
+    `${filteredMatches.length} match${filteredMatches.length === 1 ? "" : "es"} shown`;
+
   emptyState.hidden = filteredMatches.length !== 0;
 }
 
 filterButtons.forEach((button) => {
   button.addEventListener("click", () => {
-    filterButtons.forEach((item) => item.classList.remove("is-selected"));
+    filterButtons.forEach((item) => {
+      item.classList.remove("is-selected");
+    });
+
     button.classList.add("is-selected");
     renderSchedule(button.dataset.filter);
   });
 });
 
 renderSchedule();
+
+
+/* Action Gallery */
+
 const actionShots = [
-    "action/MSJ-500.jpg",
-    "action/MSJ-505.jpg",
-    "action/MSJ-506.jpg",
-    "action/MSJ-512.jpg",
-    "action/MSJ-518.jpg",
-    "action/MSJ-551.jpg",
-    "action/MSJ-552.jpg",
-    "action/MSJ-563.jpg",
-    "action/MSJ-585.jpg",
-    "action/MSJ-611.jpg",
-    "action/MSJ-705.jpg",
-    "action/MSJ-727.jpg",
-    "action/MSJ-751.jpg"
-    "action/MSJ-522.jpg"
-    "action/MSJ-535.jpg"
-    "action/MSJ-656.jpg"
-    "action/MSJ-669.jpg"
-    "action/MSJ-747.jpg"
-    "action/MSJ-779.jpg"
+  "action/MSJ-500.jpg",
+  "action/MSJ-505.jpg",
+  "action/MSJ-506.jpg",
+  "action/MSJ-512.jpg",
+  "action/MSJ-518.jpg",
+  "action/MSJ-522.jpg",
+  "action/MSJ-535.jpg",
+  "action/MSJ-551.jpg",
+  "action/MSJ-552.jpg",
+  "action/MSJ-563.jpg",
+  "action/MSJ-585.jpg",
+  "action/MSJ-611.jpg",
+  "action/MSJ-656.jpg",
+  "action/MSJ-669.jpg",
+  "action/MSJ-705.jpg",
+  "action/MSJ-727.jpg",
+  "action/MSJ-747.jpg",
+  "action/MSJ-751.jpg",
+  "action/MSJ-779.jpg"
 ];
 
 const galleryImage = document.getElementById("action-gallery-image");
@@ -96,27 +124,27 @@ const nextButton = document.getElementById("gallery-next");
 let currentImage = 0;
 
 function showImage(index) {
-    currentImage = (index + actionShots.length) % actionShots.length;
+  currentImage = (index + actionShots.length) % actionShots.length;
 
-    galleryImage.style.opacity = "0";
+  galleryImage.style.opacity = "0";
 
-    setTimeout(() => {
-        galleryImage.src = actionShots[currentImage];
-        galleryImage.style.opacity = "1";
-    }, 250);
+  setTimeout(() => {
+    galleryImage.src = actionShots[currentImage];
+    galleryImage.style.opacity = "1";
+  }, 250);
 }
 
 function nextImage() {
-    showImage(currentImage + 1);
+  showImage(currentImage + 1);
 }
 
 function previousImage() {
-    showImage(currentImage - 1);
+  showImage(currentImage - 1);
 }
 
 if (galleryImage && previousButton && nextButton) {
-    nextButton.addEventListener("click", nextImage);
-    previousButton.addEventListener("click", previousImage);
+  nextButton.addEventListener("click", nextImage);
+  previousButton.addEventListener("click", previousImage);
 
-    setInterval(nextImage, 5000);
+  setInterval(nextImage, 5000);
 }
