@@ -67,3 +67,50 @@ filterButtons.forEach((button) => {
 });
 
 renderSchedule();
+const actionShots = [
+    "action/MSJ-500.jpg",
+    "action/MSJ-505.jpg",
+    "action/MSJ-506.jpg",
+    "action/MSJ-512.jpg",
+    "action/MSJ-518.jpg",
+    "action/MSJ-551.jpg",
+    "action/MSJ-552.jpg",
+    "action/MSJ-563.jpg",
+    "action/MSJ-585.jpg",
+    "action/MSJ-611.jpg",
+    "action/MSJ-705.jpg",
+    "action/MSJ-727.jpg",
+    "action/MSJ-751.jpg"
+];
+
+const galleryImage = document.getElementById("action-gallery-image");
+const previousButton = document.getElementById("gallery-prev");
+const nextButton = document.getElementById("gallery-next");
+
+let currentImage = 0;
+
+function showImage(index) {
+    currentImage = (index + actionShots.length) % actionShots.length;
+
+    galleryImage.style.opacity = "0";
+
+    setTimeout(() => {
+        galleryImage.src = actionShots[currentImage];
+        galleryImage.style.opacity = "1";
+    }, 250);
+}
+
+function nextImage() {
+    showImage(currentImage + 1);
+}
+
+function previousImage() {
+    showImage(currentImage - 1);
+}
+
+if (galleryImage && previousButton && nextButton) {
+    nextButton.addEventListener("click", nextImage);
+    previousButton.addEventListener("click", previousImage);
+
+    setInterval(nextImage, 5000);
+}
