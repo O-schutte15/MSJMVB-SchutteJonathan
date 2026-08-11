@@ -610,6 +610,53 @@ section {
     border-radius: var(--radius);
     box-shadow: var(--shadow);
 }
+.campus-key {
+    max-width: 980px;
+    margin: 32px auto 0;
+    padding: 28px;
+    background: var(--surface);
+    border-left: 4px solid var(--gold);
+    border-radius: var(--radius);
+}
+
+.campus-key h2 {
+    margin-bottom: 20px;
+    color: var(--navy);
+    font-size: 1.8rem;
+}
+
+.campus-key-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 40px;
+    row-gap: 10px;
+}
+
+.campus-key-grid div {
+    padding: 7px 0;
+    border-bottom: 1px solid var(--line);
+    color: var(--muted);
+}
+
+.campus-key-grid strong {
+    color: var(--navy);
+}
+
+
+/* Dark Mode */
+
+.dark-mode .campus-key {
+    background: #103552;
+}
+
+.dark-mode .campus-key h2,
+.dark-mode .campus-key-grid strong {
+    color: var(--gold);
+}
+
+.dark-mode .campus-key-grid div {
+    border-color: var(--line);
+}
 
 .gym-photo {
     margin: 28px 0 0;
