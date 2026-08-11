@@ -728,7 +728,6 @@ body.dark-mode {
     --ink: #ffffff;
     --muted: #d9e5ef;
     --surface: #123a5c;
-    --white: #08243e;
     --line: #396184;
 
     background: var(--navy-dark);
@@ -746,11 +745,11 @@ body.dark-mode {
 }
 
 .dark-mode .wordmark em {
-    color: var(--white);
+    color: #ffffff;
 }
 
 .dark-mode .nav-links a {
-    color: var(--white);
+    color: #ffffff;
 }
 
 .dark-mode .nav-links a:hover,
@@ -758,6 +757,29 @@ body.dark-mode {
 .dark-mode .nav-links .active {
     color: var(--gold);
     background: #183b5d;
+}
+
+.dark-mode .nav-links button {
+    color: var(--gold);
+    border-color: var(--gold);
+}
+
+.dark-mode .hero h1 {
+    color: #ffffff;
+}
+
+.dark-mode .hero-copy {
+    color: #dce7f0;
+}
+
+.dark-mode .button-primary {
+    background: var(--gold);
+    color: var(--navy-dark);
+}
+
+.dark-mode .button-secondary {
+    color: #ffffff;
+    border-color: rgba(255, 255, 255, 0.7);
 }
 
 .dark-mode .person-card,
@@ -769,7 +791,7 @@ body.dark-mode {
 }
 
 .dark-mode .filter-button {
-    color: var(--ink);
+    color: #ffffff;
 }
 
 .dark-mode .filter-button.is-selected {
@@ -812,6 +834,19 @@ body.dark-mode {
 
 .dark-mode .conference-badge {
     color: var(--navy-dark);
+}
+
+.dark-mode .campus-key {
+    background: #103552;
+}
+
+.dark-mode .campus-key h2,
+.dark-mode .campus-key-grid strong {
+    color: var(--gold);
+}
+
+.dark-mode .campus-key-grid div {
+    border-color: var(--line);
 }
 
 
