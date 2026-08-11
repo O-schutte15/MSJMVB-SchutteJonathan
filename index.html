@@ -1,59 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-<head> 
+<head>
   <meta charset="UTF-8">
-  <title>MSJ Men's Volleyball - Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mount St. Joseph University Men's Volleyball: schedule, team information, and game-day details.">
+  <title>MSJ Men's Volleyball | Home</title>
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+  <header class="site-header">
+    <p class="westside-banner">Welcome to the Westside</p>
+    <nav class="navbar" aria-label="Primary navigation">
+      <a class="wordmark" href="index.html" aria-label="MSJ Men's Volleyball home">
+        <img class="site-logo" src="Lion-transparent.png" alt="Mount St. Joseph University Lions logo">
+        <span>MSJ <em>VOLLEYBALL</em></span>
+      </a>
+      <ul class="nav-links">
+        <li><a class="active" href="index.html" aria-current="page">Home</a></li>
+        <li><a href="about.html">Team</a></li>
+        <li><a href="schedule.html">Schedule</a></li>
+        <li><button id="themeToggle" type="button" aria-pressed="false">Dark mode</button></li>
+      </ul>
+    </nav>
+  </header>
 
-<header>
-  <h1>Mount St. Joseph Men's Volleyball</h1>
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-content">
+        <p class="eyebrow">Mount St. Joseph University</p>
+        <h1 id="hero-title">Built for the next point.</h1>
+        <p class="hero-copy">The MSJ Lions compete with discipline, energy, and a commitment to getting better every day—on the court and in the classroom.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="schedule.html">View schedule</a>
+          <a class="button button-secondary" href="about.html">Meet the team</a>
+        </div>
+      </div>
+      <img class="hero-image" src="MSJMVB-home-crop.png" alt="Mount St. Joseph men's volleyball players in uniform">
+    </section>
 
-  <nav class="navbar">
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="schedule.html">Schedule</a></li>
-       <li><button id="themeToggle">Dark Mode</button></li>
-    </ul>
-   
-  </nav>
-</header>
+    <section class="stats-section" aria-label="Program at a glance">
+      <div class="section-heading">
+        <p class="eyebrow">Program at a glance</p>
+        <h2>One team. One standard.</h2>
+      </div>
+      <div class="stat-grid">
+        <article class="stat-card"><span class="stat-value">NCAA</span><span class="stat-label">Division III</span></article>
+        <article class="stat-card"><span class="stat-value">6</span><span class="stat-label">Featured matches</span></article>
+        <article class="stat-card"><span class="stat-value">MSJ</span><span class="stat-label">Lions pride</span></article>
+        <article class="stat-card"><span class="stat-value">5701</span><span class="stat-label">Delhi Road, Cincinnati</span></article>
+      </div>
+    </section>
 
-<main>
+    <section class="next-match" aria-labelledby="next-match-title">
+      <div>
+        <p class="eyebrow">Next match</p>
+        <h2 id="next-match-title">Lions vs. Trine University</h2>
+        <p>February 19 &middot; Home &middot; Harrington Center</p>
+      </div>
+      <a class="button button-primary" href="schedule.html">Full schedule</a>
+    </section>
 
-<section>
-  <h2>Welcome to MSJ Men's Volleyball</h2>
-  <p>
-    The Mount St. Joseph University men's volleyball team competes at the NCAA Division III level and represents the MSJ Lions with pride. The program emphasizes teamwork, discipline, and competitive excellence both on and off the court.
-  </p>
-</section>
+    <section class="feature-section" aria-labelledby="program-title">
+      <div>
+        <p class="eyebrow">The program</p>
+        <h2 id="program-title">Compete with purpose.</h2>
+      </div>
+      <p>The Lions are a program built on teamwork, leadership, and student-athlete development. Every practice and match is an opportunity to create a stronger team.</p>
+    </section>
 
-<section>
-  <h2>Program Highlights</h2>
-  <ul>
-    <li>Teamwork and leadership</li>
-    <li>Competitive collegiate athletics</li>
-    <li>Student-athlete development</li>
-  </ul>
-  <p>
-    The MSJ men's volleyball program continues to grow as a competitive team within collegiate athletics. The Lions focus on developing strong team chemistry, improving individual skills, and competing at a high level throughout the season.
-  </p>
-</section>
+    <section class="campus-map-section" aria-labelledby="campus-map-title">
+      <div class="section-heading"><p class="eyebrow">Visit MSJ</p><h2 id="campus-map-title">Find your way to the Lions.</h2></div>
+      <img class="campus-map" src="MSJ_MAP.JPG" alt="Map of Mount St. Joseph University campus">
+    </section>
+  </main>
 
-<section>
-  <h2>Team Photo</h2>
-  <img src="MSJMVB.JPG" alt="Mount St. Joseph men's volleyball team photo">
-</section>
-
-</main>
-
-<footer>
-  <p>&copy; 2026 Mount St. Joseph Men's Volleyball</p>
-</footer>
-
-<script src="script.js"></script>
+  <footer><p>&copy; 2026 Mount St. Joseph Men's Volleyball</p></footer>
+  <script src="script.js"></script>
 </body>
 </html>

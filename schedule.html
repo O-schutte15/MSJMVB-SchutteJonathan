@@ -2,92 +2,61 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>MSJ Men's Volleyball - Schedule</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mount St. Joseph Men's Volleyball schedule and match results.">
+  <title>MSJ Men's Volleyball | Schedule</title>
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+  <header class="site-header">
+    <p class="westside-banner">Welcome to the Westside</p>
+    <nav class="navbar" aria-label="Primary navigation">
+      <a class="wordmark" href="index.html" aria-label="MSJ Men's Volleyball home">
+        <img class="site-logo" src="Lion-transparent.png" alt="Mount St. Joseph University Lions logo">
+        <span>MSJ <em>VOLLEYBALL</em></span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">Team</a></li>
+        <li><a class="active" href="schedule.html" aria-current="page">Schedule</a></li>
+        <li><button id="themeToggle" type="button" aria-pressed="false">Dark mode</button></li>
+      </ul>
+    </nav>
+  </header>
 
-<header>
-  <h1>Game Schedule and Results</h1>
-
-  <nav class="navbar">
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About the Team</a></li>
-      <li><a href="schedule.html">Schedule</a></li>
-      <li><button id="themeToggle">Dark Mode</button></li> 
-    </ul>
-
-  </nav>
-</header>
-
-<main>
-
-
-<section>
-  <h2>Season Schedule</h2>
-
-  <ul>
-    <li>January 9 – Lakeland University (Away)</li>
-    <li>January 23 – Saint Vincent College (Away)</li>
-    <li>January 31 – Franklin College (Home)</li>
-    <li>February 19 – Trine University (Home)</li>
-  </ul>
-
-  <p>
-    The MSJ men's volleyball team competes in a full season against NCAA Division III opponents. Matches are played both at home and on the road throughout the spring season.
-  </p>
-</section>
-
-
-<section>
-  <h2>Conference Games</h2>
-
-  <ul>
-    <li>April 2 – Wabash College (Away)</li>
-    <li>April 3 – Spalding University (Away)</li>
-  </ul>
-
-  <p>
-    Conference matches are especially important as they impact postseason opportunities. These games are key moments in the MSJ season.
-  </p>
-</section>
-
-
-<section>
-  <h2>Recent Results</h2>
-
-  <ul>
-    <li>vs Lakeland University – Loss (0–3)</li>
-    <li>vs Saint Vincent College – Loss (1–3)</li>
-    <li>vs Franklin College – Win (3–2)</li>
-  </ul>
-
-  <p>
-    These results highlight the team's performance throughout the season as they continue to improve and compete at a high level.
-  </p>
-</section>
-
-
-<section>
-  <h2>Game Day Information</h2>
-<p>
-    Home matches for the Mount St. Joseph men's volleyball team are played in the Harrington Center, located on campus at 5701 Delhi Road. Fans are encouraged to arrive early to find seating and enjoy the full game day atmosphere.
-  </p>
-
-  <p>
-    The Harrington Center provides a great environment for collegiate volleyball, and supporters play an important role in creating energy for the team during home matches.
-  </p>
-
-</section>
-
-</main>
-
-<footer>
-  <p>&copy; 2026 Mount St. Joseph Men's Volleyball</p>
-</footer>
-
-<script src="script.js"></script>
+  <main>
+    <section class="page-intro schedule-intro">
+      <p class="eyebrow">2026 season</p>
+      <h1>Schedule &amp; results</h1>
+      <p>Follow the Lions through every home, away, and completed match.</p>
+    </section>
+    <section aria-labelledby="matches-title">
+      <div class="schedule-toolbar">
+        <h2 id="matches-title">Matches</h2>
+        <div class="filter-group" role="group" aria-label="Filter matches">
+          <button class="filter-button is-selected" type="button" data-filter="all">All</button>
+          <button class="filter-button" type="button" data-filter="home">Home</button>
+          <button class="filter-button" type="button" data-filter="away">Away</button>
+          <button class="filter-button" type="button" data-filter="mcvl">MCVL</button>
+          <button class="filter-button" type="button" data-filter="completed">Completed</button>
+        </div>
+      </div>
+      <p id="matchCount" class="match-count" aria-live="polite"></p>
+      <div id="scheduleList" class="schedule-list"></div>
+      <p id="emptyState" class="empty-state" hidden>No matches match this filter.</p>
+    </section>
+    <section class="game-day" aria-labelledby="gameday-title">
+      <p class="eyebrow">Game day</p>
+      <h2 id="gameday-title">Make some noise for the Lions.</h2>
+      <p>Home matches are played in the Harrington Center at 5701 Delhi Road. Arrive early, find your seat, and help create the energy that makes home court special.</p>
+      <figure class="gym-photo"><img src="harringtongym_FINAL.jpg" alt="The Harrington Center gym during a Mount St. Joseph event"><figcaption>Harrington Center &mdash; home of MSJ Men's Volleyball.</figcaption></figure>
+    </section>
+    <section class="campus-map-section" aria-labelledby="campus-map-title">
+      <div class="section-heading"><p class="eyebrow">Visit MSJ</p><h2 id="campus-map-title">Find your way to the Lions.</h2></div>
+      <img class="campus-map" src="MSJ_MAP.JPG" alt="Map of Mount St. Joseph University campus">
+    </section>
+  </main>
+  <footer><p>&copy; 2026 Mount St. Joseph Men's Volleyball</p></footer>
+  <script src="script.js"></script>
 </body>
 </html>
